@@ -1,6 +1,6 @@
 .primary {
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +15,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .nav2 a {
@@ -24,17 +23,16 @@
   text-align: center;
   width: 100wh;
   text-decoration: none;
-  color: #234A56;
+  color: #234a56;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 1.2s;
-
 }
 
 .nav2 a:hover {
   letter-spacing: 2px;
   color: white;
-  background-color: #417D95;
+  background-color: #417d95;
   transition: 0.64s;
   opacity: 50%;
 }

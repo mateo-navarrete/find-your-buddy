@@ -3,7 +3,7 @@ import React from "react";
 export const Intro = props => {
   return (
     <>
-      <div>Intro</div>
+      <div>1/6 Intro</div>
       <div>Animal A# _</div>
       <div>Animal Name: _</div>
       <p>
@@ -18,6 +18,9 @@ export const Intro = props => {
         must be 18 years or older to adopt an animal.
       </p>
       <br />
+      <button name="intro" onClick={props.handleNext}>
+        next
+      </button>
     </>
   );
 };

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../styles/logo.css";
-import "../../styles/navBar.css";
-// import '../../image/fyblogo.png';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../styles/logo.css';
+import '../../styles/navBar.css';
+// import '../../image/fyblogo.psng';
 
 export const NavBar = props => {
   return (
