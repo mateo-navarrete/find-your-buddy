@@ -1,18 +1,18 @@
 import React from "react";
 import { WithCats } from "../../containers";
-import { CatsPage } from "./catsPage";
+import { AnimalsPictures } from "./animalPictures";
 
-const AllAnimalPage = props => {
+const CatPage = ({ included }) => {
   // console.log("animals page", included);
 
   return (
     <>
-      <div> All Pets </div>
+      <div> All cats </div>
       <div>
         <ul>
           <li>
             {" "}
-            <CatsPage />{" "}
+            <AnimalsPictures included={included} />{" "}
           </li>
           <li> something</li>
         </ul>
@@ -21,4 +21,4 @@ const AllAnimalPage = props => {
   );
 };
 
-export const AllAnimalsPage = WithCats(AllAnimalPage);
+export const CatsPage = WithCats(CatPage);

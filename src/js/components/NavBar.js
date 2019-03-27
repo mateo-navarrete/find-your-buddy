@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../styles/logo.css";
-import "../../styles/navBar.css";
-import "../../image/fyblogo.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../styles/logo.css';
+import '../../styles/navBar.css';
+import '../../image/fyblogo.png';
 
 export const NavBar = props => {
   return (
@@ -18,7 +18,8 @@ export const NavBar = props => {
       </div>
       <div className="nav2">
         <Link to="/">Home</Link>
-        <Link to="/animal">Animal Page</Link>
+        <Link to="/cats">Cats Page</Link>
+        <Link to="/dogs">Dogs Page</Link>
         <Link to="/form">Form Page</Link>
       </div>
     </nav>
