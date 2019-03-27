@@ -1,5 +1,5 @@
 import { AllAnimalsPage } from './Petpages/AllAnimalsPage';
-import { FormPage } from './FormPage';
+import { FormPage } from './Form';
 import { HomePage } from './HomePage';
 import { NavBar } from './NavBar';
 import { SwitchRouter } from './SwitchRouter';

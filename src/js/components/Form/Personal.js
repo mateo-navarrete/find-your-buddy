@@ -1,9 +1,9 @@
 import React from "react";
 
-export const FormPage = props => {
+export const Personal = props => {
   return (
     <>
-      <div>FormPage</div>
+      <div>Personal</div>
     </>
   );
 };
