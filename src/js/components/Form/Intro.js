@@ -18,6 +18,9 @@ export const Intro = props => {
         must be 18 years or older to adopt an animal.
       </p>
       <br />
+      <button name="intro" onClick={props.handleNext}>
+        next
+      </button>
     </>
   );
 };
