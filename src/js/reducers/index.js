@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-// import { hudReducer } from './hudReducer';
+import { animalsReducer } from './animalsReducer';
 // import { menuReducer } from './menuReducer';
 
 export const rootReducer = combineReducers({
-  // hudReducer,
+  animalsReducer,
   // menuReducer,
 });
