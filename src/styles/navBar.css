@@ -1,7 +1,7 @@
 
 .primary {
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,7 +9,6 @@
   background-color: rgba(221, 231, 220, 0.719);
   /* border: 1px solid black; */
   box-shadow: 2px 1px 15px -5px #bdbdbd;
-
 }
 
 .nav2 {
