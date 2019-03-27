@@ -7,6 +7,7 @@ export const AllAnimalsPage = props => {
       <div>
         <ul>
           <li> all pets info go here</li>
+          <li> something</li>
         </ul>
       </div>
     </>
