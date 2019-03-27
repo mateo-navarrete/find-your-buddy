@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
 .primary {
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +8,6 @@
   background-color: rgba(221, 231, 220, 0.719);
   /* border: 1px solid black; */
   box-shadow: 2px 1px 15px -5px #bdbdbd;
-
 }
 
 .nav2 {
@@ -26,12 +23,11 @@
   text-align: center;
   width: 250px;
   text-decoration: none;
-  color: #234A56;
+  color: #234a56;
 }
 
 .nav2 a:hover {
   letter-spacing: 1.8px;
   color: white;
-  background-color: #417D95;
+  background-color: #417d95;
 }
->>>>>>> 22f3c91118e11a0f7fb23c5e9c773f283f62fa5a
