@@ -16,7 +16,7 @@ export const NavBar = props => {
           </div>
         </Link>
       </div>
-      <div className="nav">
+      <div className="nav2">
         <Link to="/">Home</Link>
         <Link to="/animal">Animal Page</Link>
         <Link to="/form">Form Page</Link>

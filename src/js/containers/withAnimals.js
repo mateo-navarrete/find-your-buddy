@@ -6,6 +6,7 @@ const mapStateToProps = ({ animalsReducer }) => {
   return {
     animals: animalsReducer.animals,
     loading: animalsReducer.loading,
+    included: animalsReducer.included,
   };
 };
 
