@@ -1,7 +1,8 @@
-import { AllAnimalsPage } from './Petpages/AllAnimalsPage';
-import { FormPage } from './Form';
-import { HomePage } from './HomePage';
-import { NavBar } from './NavBar';
-import { SwitchRouter } from './SwitchRouter';
+import { CatsPage } from "./Petpages/catsPage";
+import { DogsPage } from "./Petpages/dogsPage";
+import { FormPage } from "./Form";
+import { HomePage } from "./HomePage";
+import { NavBar } from "./NavBar";
+import { SwitchRouter } from "./SwitchRouter";
 
-export { AllAnimalsPage, FormPage, HomePage, NavBar, SwitchRouter };
+export { CatsPage, DogsPage, FormPage, HomePage, NavBar, SwitchRouter };

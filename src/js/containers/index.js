@@ -1,3 +1,4 @@
-import withAnimals from './withAnimals';
+import WithDogs from './withDogs';
+import WithCats from './withCats';
 
-export { withAnimals };
+export { WithCats, WithDogs };
