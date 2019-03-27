@@ -1,0 +1,30 @@
+nav {
+  align-items: center;
+  display: flex;
+  font-family: Oswald;
+  height: 75px;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  width: 50%;
+}
+
+nav a {
+  color: #d1d1d1;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #d1d1d1;
+}
