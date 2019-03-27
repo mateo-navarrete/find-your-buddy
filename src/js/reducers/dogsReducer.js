@@ -1,13 +1,13 @@
-import { GETTING_ANIMALS, GOT_ERROR, GOT_ANIMALS } from '../constants';
+import { GETTING_ANIMALS, GOT_ERROR, GOT_ANIMALS } from "../constants";
 
 const initState = {
   data: [],
   included: [],
   meta: [],
-  loading: false,
+  loading: false
 };
 
-export const animalsReducer = (state = initState, action) => {
+export const dogsReducer = (state = initState, action) => {
   let nextState;
   switch (action.type) {
     case GETTING_ANIMALS:
@@ -24,7 +24,7 @@ export const animalsReducer = (state = initState, action) => {
         loading: true,
         data: data,
         included: included,
-        meta: meta,
+        meta: meta
       };
       console.log(nextState, action.payload);
       return nextState;
