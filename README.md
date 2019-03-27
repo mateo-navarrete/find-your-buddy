@@ -6,7 +6,9 @@
 
 Find Your Buddy is a web application to make adoption fast and easy.
 
-[rescue groups api]: https://rescuegroups.org/services/adoptable-pet-data-api/
+[rescue groups api][api]
+
+[api]: https://rescuegroups.org/services/adoptable-pet-data-api/
 
 [ View the Wiki ][wiki]
 
