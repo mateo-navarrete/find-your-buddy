@@ -1,5 +1,6 @@
 import React from "react";
-impoet HomePetImgs from './homePetImgs'
+import { PetImgs } from "./petImgs";
+
 export const HomePage = props => {
   return (
     <>
@@ -10,7 +11,9 @@ export const HomePage = props => {
         <div>
           {" "}
           <p>description </p>
-          <div>pet img</div>
+          <div>
+            <PetImgs />
+          </div>
         </div>
       </div>
     </>

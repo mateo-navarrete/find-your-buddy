@@ -1,12 +1,12 @@
 import React from "react";
 
-export const HomePetImgs = props => {
+export const AllAnimalsPage = props => {
   return (
     <>
+      <div> All Pets </div>
       <div>
         <ul>
-          <li> pet img goes here</li>
-          <li> something</li>
+          <li> all pets info go here</li>
         </ul>
       </div>
     </>
