@@ -1,9 +1,12 @@
 import React from "react";
+import { withAnimals } from "../containers";
 
-export const AnimalPage = props => {
+const AnimalsPage = props => {
   return (
     <>
       <div>AnimalPage</div>
     </>
   );
 };
+
+export const AnimalPage = withAnimals(AnimalsPage);

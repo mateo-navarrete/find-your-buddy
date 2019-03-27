@@ -1,6 +1,7 @@
 import React from "react";
+import { withAnimals } from "../containers";
 
-export const AllAnimalsPage = props => {
+const AllAnimalsPage = props => {
   return (
     <>
       <div> All Pets </div>
@@ -13,3 +14,4 @@ export const AllAnimalsPage = props => {
     </>
   );
 };
+export const AnimalPage = withAnimals(AnimalsPage);
