@@ -3,7 +3,7 @@ import React from "react";
 export const Household = props => {
   return (
     <>
-      <div>Household</div>
+      <div>3/6 Household</div>
       <div>People living in your household:</div>
       <div>Name </div>
       <div>Contact Number </div>
@@ -19,6 +19,12 @@ export const Household = props => {
       </div>
       <div>If you rent, please list landlord name and phone number:____</div>
       <br />
+      <button name="household" onClick={props.handleBack}>
+        back
+      </button>
+      <button name="household" onClick={props.handleNext}>
+        next
+      </button>
     </>
   );
 };
