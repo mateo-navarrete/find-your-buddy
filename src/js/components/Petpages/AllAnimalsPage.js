@@ -1,10 +1,14 @@
 import React from "react";
-import { withAnimals } from "../../containers";
-import { AnimalsPictures } from "./animalPictures";
+import { WithCats } from "../../containers";
+import { CatsPage } from "./catsPage";
 
+<<<<<<< HEAD
 import "../../../styles/animals.css"
 
 const AllAnimalPage = ({ included }) => {
+=======
+const AllAnimalPage = props => {
+>>>>>>> 6599b4f073d2e37c663c489458d24563f8666078
   // console.log("animals page", included);
 
   return (
@@ -14,7 +18,7 @@ const AllAnimalPage = ({ included }) => {
         <ul>
           <li>
             {" "}
-            <AnimalsPictures included={included} />{" "}
+            <CatsPage />{" "}
           </li>
           <li> something</li>
         </ul>
@@ -23,4 +27,4 @@ const AllAnimalPage = ({ included }) => {
   );
 };
 
-export const AllAnimalsPage = withAnimals(AllAnimalPage);
+export const AllAnimalsPage = WithCats(AllAnimalPage);
