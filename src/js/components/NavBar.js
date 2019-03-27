@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../styles/logo.css';
-import '../../styles/navBar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../styles/logo.css";
+import "../../styles/navBar.css";
 import '../../image/fyblogo.png';
 
 export const NavBar = props => {
