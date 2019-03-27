@@ -1,6 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../styles/navBar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../styles/logo.css";
+import "../../styles/navBar.css";
+import "../../image/fyblogo.png";
 
 export const NavBar = props => {
   return (
@@ -8,8 +10,9 @@ export const NavBar = props => {
       <div className="nav">
         <Link to="/">
           <div className="flex align">
-            <div className="logo" > 
-            Find Your Buddy</div>
+            <div className="logoDiv">
+              <img src="../../image/fyblogo.png" alt="" />
+            </div>
           </div>
         </Link>
       </div>
