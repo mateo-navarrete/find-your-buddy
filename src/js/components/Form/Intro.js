@@ -3,7 +3,7 @@ import React from "react";
 export const Intro = props => {
   return (
     <>
-      <div>Intro</div>
+      <div>1/6 Intro</div>
       <div>Animal A# _</div>
       <div>Animal Name: _</div>
       <p>
