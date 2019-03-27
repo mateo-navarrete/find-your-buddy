@@ -1,21 +1,20 @@
 import React from "react";
-import { withAnimals } from "../containers";
 
-export const AnimalsPictures = props => {
+export const AnimalsPictures = ({ included }) => {
+  let count = 0;
+  let renderPetImgs = included.map(pet => {
+    count++;
+    if (pet.attributes.large && count % 3 === 0) {
+      let imgUrl = pet.attributes.large.url;
 
-  const { included } = this.props;
-
-  const renderPetImgs = included.map(pet => {
-    if (pet.attributes.large) {
       return (
-        <>
-        <div>
-          <img src {pet.attributes.large.url} alt=''/>
+        <div key={pet.id}>
+          <img src={imgUrl} alt="" />
         </div>
-        </>
-      )
+      );
     }
   });
+
   return (
     <>
       <div>{renderPetImgs}</div>

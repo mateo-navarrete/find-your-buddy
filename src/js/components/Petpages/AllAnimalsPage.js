@@ -1,30 +1,19 @@
 import React from "react";
 import { withAnimals } from "../../containers";
+import { AnimalsPictures } from "./animalPictures";
 
 const AllAnimalPage = ({ included }) => {
-  console.log("animals page", included);
-
-  let count = 0;
-
-  let renderPetImgs = included.map(pet => {
-    count++;
-    if (pet.attributes.large && count % 3 === 0) {
-      let imgUrl = pet.attributes.large.url;
-
-      return (
-        <div key={pet.id}>
-          <img src={imgUrl} alt="" />
-        </div>
-      );
-    }
-  });
+  // console.log("animals page", included);
 
   return (
     <>
       <div> All Pets </div>
       <div>
         <ul>
-          <li> {renderPetImgs}</li>
+          <li>
+            {" "}
+            <AnimalsPictures included={included} />{" "}
+          </li>
           <li> something</li>
         </ul>
       </div>
