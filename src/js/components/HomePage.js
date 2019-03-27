@@ -1,5 +1,5 @@
 import React from "react";
-import { withAnimals } from "../containers";
+import { WithCats } from "../containers";
 import { PetImgs } from "./petImgs";
 
 export const Home = props => {
@@ -21,4 +21,4 @@ export const Home = props => {
   );
 };
 
-export const HomePage = withAnimals(Home);
+export const HomePage = WithCats(Home);

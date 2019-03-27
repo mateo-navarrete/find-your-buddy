@@ -1,3 +1,4 @@
-import { getAnimals } from './animalActions';
+import { getCats } from "./catActions";
+import { getDogs } from "./dogActions";
 
-export { getAnimals };
+export { getCats, getDogs };
