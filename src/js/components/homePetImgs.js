@@ -6,6 +6,7 @@ export const HomePetImgs = props => {
       <div>
         <ul>
           <li> pet img goes here</li>
+          <li> something</li>
         </ul>
       </div>
     </>
