@@ -8,11 +8,12 @@ export const NavBar = props => {
       <div className="nav">
         <Link to="/">
           <div className="flex align">
-            <div className="logo" /> <div>Find Your Buddy</div>
+            <div className="logo" > 
+            Find Your Buddy</div>
           </div>
         </Link>
       </div>
-      <div className="nav">
+      <div className="nav2">
         <Link to="/">Home</Link>
         <Link to="/animal">Animal Page</Link>
         <Link to="/form">Form Page</Link>
