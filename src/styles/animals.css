@@ -1,0 +1,10 @@
+ul{
+  width: 100px;
+}
+
+li div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 400px;
+}
+

@@ -2,6 +2,8 @@ import React from "react";
 import { withAnimals } from "../../containers";
 import { AnimalsPictures } from "./animalPictures";
 
+import "../../../styles/animals.css"
+
 const AllAnimalPage = ({ included }) => {
   // console.log("animals page", included);
 
