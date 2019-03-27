@@ -1,13 +1,19 @@
 import React from "react";
 import { withAnimals } from "../../containers";
+import { AnimalsPictures } from "./animalPictures";
 
-const AllAnimalPage = props => {
+const AllAnimalPage = ({ included }) => {
+  // console.log("animals page", included);
+
   return (
     <>
       <div> All Pets </div>
       <div>
         <ul>
-          <li> all pets info go here</li>
+          <li>
+            {" "}
+            <AnimalsPictures included={included} />{" "}
+          </li>
           <li> something</li>
         </ul>
       </div>
