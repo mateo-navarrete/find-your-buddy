@@ -6,7 +6,6 @@ import { withAge } from "../../containers";
 const Age = ({ id, is18, label, options, ...props }) => {
   return (
     <>
-      <div>1/6 Intro</div>
       <p>
         Animal A# (IS THIS TO BE AUTO CONNECTED VIA REDUX TO THE ANIMAL THE USER
         WANTS TO ADOPT?)

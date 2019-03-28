@@ -1,4 +1,5 @@
 import RadioGroup from './RadioGroup';
+import StyledStepper from './StyledStepper';
 import { AdoptInfo } from './AdoptInfo';
 import { Household } from './Household';
 import { AgeForm } from './AgeForm';
@@ -9,6 +10,7 @@ import FormPage from './FormPage';
 
 export {
   RadioGroup,
+  StyledStepper,
   AdoptInfo,
   Household,
   AgeForm,
