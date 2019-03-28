@@ -1,9 +1,9 @@
 import React from "react";
 import { WithCats } from "../../containers";
-import { AnimalsPictures } from "./animalPictures";
+import { AnimalDisplay } from "./animalDisplay";
 
-const CatPage = ({ included }) => {
-  // console.log("animals page", included);
+const CatPage = ({ included, data }) => {
+  console.log("animals page", data);
 
   return (
     <>
@@ -12,7 +12,7 @@ const CatPage = ({ included }) => {
         <ul>
           <li>
             {" "}
-            <AnimalsPictures included={included} />{" "}
+            <AnimalDisplay included={included} data={data} />{" "}
           </li>
           <li> something</li>
         </ul>
