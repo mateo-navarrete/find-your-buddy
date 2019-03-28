@@ -1,5 +1,5 @@
 import React from "react";
-import { WithCats } from "../containers";
+import { withCats } from "../containers";
 import { PetImgs } from "./petImgs";
 import "../../styles/homePage.css";
 
@@ -27,4 +27,4 @@ export const Home = props => {
   );
 };
 
-export const HomePage = WithCats(Home);
+export const HomePage = withCats(Home);

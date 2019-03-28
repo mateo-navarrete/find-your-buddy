@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-const WithDogs = WrappedComponent => {
+const withDogs = WrappedComponent => {
   class HOC extends Component {
     componentDidMount() {
       this.props.getDogs();
@@ -33,4 +33,4 @@ const WithDogs = WrappedComponent => {
   )(HOC);
 };
 
-export default WithDogs;
+export default withDogs;

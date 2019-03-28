@@ -1,5 +1,5 @@
 import React from "react";
-import { WithDogs } from "../../containers";
+import { withDogs } from "../../containers";
 
 import { AnimalDisplay } from "./animalDisplay";
 
@@ -24,4 +24,4 @@ const DogPage = ({ included, data }) => {
   );
 };
 
-export const DogsPage = WithDogs(DogPage);
+export const DogsPage = withDogs(DogPage);
