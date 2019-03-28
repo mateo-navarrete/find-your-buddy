@@ -3,7 +3,7 @@ import React from "react";
 export const Outro = props => {
   return (
     <>
-      <div>Outro</div>
+      <div>6/6 Outro</div>
       <br />
       <div>
         The information I have provided in this Pet Adoption Questionnaire is
@@ -19,6 +19,10 @@ export const Outro = props => {
         _________________________ Animal #: ___________________________ Adoption
         counseling notes attached: ___ Yes ___ No If no, why? __
       </div>
+      <br />
+      <button name="outro" onClick={props.handleBack}>
+        back
+      </button>
     </>
   );
 };

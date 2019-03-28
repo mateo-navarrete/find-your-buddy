@@ -3,7 +3,7 @@ import React from "react";
 export const AdoptInfo = props => {
   return (
     <>
-      <div>AdoptInfo</div>
+      <div>5/6 AdoptInfo</div>
       <div>YOUR NEW PET: </div>
       <div>
         What is your primary reason for adopting?
@@ -22,6 +22,12 @@ export const AdoptInfo = props => {
         the above ___ Other (please explain) _________________
       </div>
       <br />
+      <button name="adoptInfo" onClick={props.handleBack}>
+        back
+      </button>
+      <button name="adoptInfo" onClick={props.handleNext}>
+        next
+      </button>
     </>
   );
 };

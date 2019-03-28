@@ -10,6 +10,30 @@ export default class FormPage extends Component {
     adoptInfo: false,
     outro: false
   };
+  handleNext = e => {
+    const { name } = e.target;
+    const nextSection = {
+      // outro: "intro",
+      intro: "personal",
+      personal: "household",
+      household: "petStatus",
+      petStatus: "adoptInfo",
+      adoptInfo: "outro"
+    };
+    this.setState({ [name]: false, [nextSection[name]]: true });
+  };
+  handleBack = e => {
+    const { name } = e.target;
+    const backSection = {
+      // intro: "outro",
+      personal: "intro",
+      household: "personal",
+      petStatus: "household",
+      adoptInfo: "petStatus",
+      outro: "adoptInfo"
+    };
+    this.setState({ [name]: false, [backSection[name]]: true });
+  };
   render() {
     const {
       intro,
@@ -23,12 +47,37 @@ export default class FormPage extends Component {
     return (
       <>
         <div>Pet Adoption Questionnaire</div>
-        {intro ? <Intro /> : ""}
-        {personal ? <Personal /> : ""}
-        {household ? <Household /> : ""}
-        {petStatus ? <PetStatus /> : ""}
-        {adoptInfo ? <AdoptInfo /> : ""}
-        {outro ? <Outro /> : ""}
+        {intro ? <Intro handleNext={this.handleNext} /> : ""}
+        {personal ? (
+          <Personal handleNext={this.handleNext} handleBack={this.handleBack} />
+        ) : (
+          ""
+        )}
+        {household ? (
+          <Household
+            handleNext={this.handleNext}
+            handleBack={this.handleBack}
+          />
+        ) : (
+          ""
+        )}
+        {petStatus ? (
+          <PetStatus
+            handleNext={this.handleNext}
+            handleBack={this.handleBack}
+          />
+        ) : (
+          ""
+        )}
+        {adoptInfo ? (
+          <AdoptInfo
+            handleNext={this.handleNext}
+            handleBack={this.handleBack}
+          />
+        ) : (
+          ""
+        )}
+        {outro ? <Outro handleBack={this.handleBack} /> : ""}
       </>
     );
   }
