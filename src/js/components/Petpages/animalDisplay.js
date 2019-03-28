@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnimalsPictures } from './animalPictures';
+// import { AnimalsPictures } from './AnimalPictures';
 
 export const AnimalDisplay = ({ pet, imgUrl }) => {
   return (
