@@ -3,11 +3,13 @@ import { withCats } from "../containers";
 import { PetImgs } from "./petImgs";
 import "../../styles/homePage.css";
 
+
 import video1 from "../../images/cat_in_the_sun.mp4"
 
 
 
 //Jacky 
+
 
 
 export const Home = props => {

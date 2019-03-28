@@ -1,7 +1,11 @@
 import React from "react";
-import { withAnimals } from "../containers";
+import { withSingleAnimal } from "../../containers";
 
-const AnimalsPage = props => {
+export const AnimalsPage = ({ data }) => {
+  const renderAnimalInfo = data.map(pet => {
+    if (data) {
+    }
+  });
   return (
     <>
       <div>AnimalPage</div>
@@ -9,4 +13,4 @@ const AnimalsPage = props => {
   );
 };
 
-export const AnimalPage = withAnimals(AnimalsPage);
+export const AnimalPage = withSingleAnimal(AnimalsPage);

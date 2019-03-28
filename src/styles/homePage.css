@@ -22,9 +22,10 @@
   /* text-align: center; */
   width: 600px;
   margin-top: 10%;
-  margin-left: 30%;
+  margin-left: 26%;
+  padding: 30px;
   background-color: rgba(41, 41, 41, 0.178);
-  border-radius: 1px;
+  border-radius: 4px;
 
 }
 
@@ -48,10 +49,11 @@
 
 
 .body_title {
+
   position: relative;
   height: 500px;
   /* top: 100px; */
-  margin-top: 10%;
+  /* margin-top: 100%; */
   z-index: 0;
 
 }

@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  Paper,
+  Typography,
+  TextField,
+  Button
+  // IconButton,
+  // FormControl,
+  // Select
+} from "@material-ui/core";
 
 export const Outro = props => {
   return (
