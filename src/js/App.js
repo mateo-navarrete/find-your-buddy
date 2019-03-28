@@ -5,10 +5,12 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <StyledNavBar />
+       
         <NavBar />
         <SwitchRouter />
       </>
     );
   }
 }
+
+{/* <StyledNavBar /> */}
