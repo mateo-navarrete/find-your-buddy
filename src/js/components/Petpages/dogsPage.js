@@ -1,7 +1,7 @@
 import React from "react";
 import { withDogs } from "../../containers";
 
-import { AnimalDisplay } from "./animalDisplay";
+import { AnimalDisplayList } from "./AnimalDisplayList";
 
 // import "../../styles/animals.css";
 
@@ -12,7 +12,7 @@ const DogPage = ({ included, data }) => {
     <>
       <div className="pageTitle"> Ya like Daaags? </div>
       <div className="animalContainer">
-            <AnimalDisplay included={included} data={data} />
+        <AnimalDisplayList included={included} data={data} />
       </div>
     </>
   );
