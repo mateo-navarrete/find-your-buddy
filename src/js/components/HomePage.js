@@ -3,6 +3,8 @@ import { withCats } from "../containers";
 import { PetImgs } from "./petImgs";
 import "../../styles/homePage.css";
 
+import video1 from "../../images/cat_in_the_sun.mp4"
+
 
 
 //Jacky 
@@ -11,22 +13,45 @@ import "../../styles/homePage.css";
 export const Home = props => {
   return (
     <>
-      <div>
+        <div className = "home_body">
+
         <div>
-          <h1 className="fyb">Find your pet</h1>
-        </div>
-        
+        <div className ="videoloop">
+          <video className="videoloop2" autoPlay loop muted>
+            <source src={video1} type="video/mp4" />
+          </video>
+          </div>
+
+        <div className = "body_title" >
+          <h1 className="fyb">Find Your Buddy</h1>
           <p className="about">
             Find your buddy is an app that make adoption accessible and simple.
             With a couple of click you can get closer on bringing one of these
             animals into their forever homes. Find your buddy here.
           </p>
-        <div>
+          </div>
+          </div>
+          <div className = "hr" > 
+          Will you adopt me today? 
+          </div>
+          <div> 
+          <p></p>
+          </div>
           <PetImgs />
-        </div>
+          
       </div>
+
+      
     </>
   );
 };
 
 export const HomePage = withCats(Home);
+
+
+
+// <div>
+//   <video className="videoloop" autoPlay loop muted>
+//     <source src={video1} type="video/mp4" />
+//   </video>
+// </div>

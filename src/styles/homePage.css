@@ -7,16 +7,18 @@
 
 .about {
   margin-top: 20px;
-  margin-left: 20%;
+  margin-left: 34%;
   margin-right: 20%;
 
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-
+  width: 450px;
+  letter-spacing: 1px;
 }
 
 .petpics {
+  bottom: 100px;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-gap: 40px;
@@ -24,8 +26,53 @@
 }
 
 .petImg {
+  padding-top: 35%;
   object-fit: cover;
   height: 350px;
   width: 300px;
+  padding-bottom: 35%;
+
 }
 
+
+
+.body_title {
+  position: relative;
+  height: 500px;
+  /* top: 100px; */
+  margin-top: 10%;
+  z-index: 0;
+}
+
+.hr {
+  position: relative;
+  top: 10x;
+  background-color: rgb(240, 240, 240);
+  top: 10px;
+  width: 100vw;
+  height: 100px;
+  /* font-family: "Rubik", sans-serif; */
+  font-family: "Acme", sans-serif;
+
+  font-size: 60px;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.videoloop2 {
+  margin-top: 25px;
+  padding-top: 120px;
+  filter: blur(2.3px);
+  position: absolute;
+  object-fit: cover;
+  object-position: 30% 30%;
+  z-index: -1;
+  width: 100vw;
+  height: 100px;
+}
+
+
+.home_body {
+  display: flex;
+  flex-direction: column;
+}
