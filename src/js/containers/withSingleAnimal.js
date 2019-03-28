@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getSingleAnimal, setAnimalId } from '../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { getSingleAnimal, setAnimalImg } from "../actions";
 
 const mapStateToProps = ({ singleAnimalReducer, willAdoptReducer }) => {
   return {
@@ -8,21 +8,22 @@ const mapStateToProps = ({ singleAnimalReducer, willAdoptReducer }) => {
     singleAnimalId: singleAnimalReducer.singleAnimalId,
     willAdoptId: willAdoptReducer.willAdoptId,
     singleAnimalImg: singleAnimalReducer.singleAnimalImg,
-    loading: singleAnimalReducer.loading,
+    loading: singleAnimalReducer.loading
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     getSingleAnimal: animalId => dispatch(getSingleAnimal(animalId)),
+    setAnimalImg: imgUrl => dispatch(getSingleAnimal(imgUrl))
   };
 };
 
 const withSingleAnimal = WrappedComponent => {
   class HOC extends Component {
     componentDidMount() {
-      console.log('@@', this.props.willAdoptId);
       this.props.getSingleAnimal(this.props.willAdoptId);
+      this.props.setAnimalImg(this.props.singleAnimalImg);
     }
 
     render() {

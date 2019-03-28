@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
 // import { AnimalsPictures } from './AnimalPictures';
-import { withWillAdopt, withSingleAnimal } from "../../containers";
+import { withWillAdopt, withSingleAnimal } from '../../containers';
 
 export const Animals = ({ pet, imgUrl, ...props }) => {
+  // console.log("imgurl", imgUrl);
   let animalUrl = `/animals/${pet.id}`;
+
   return (
     <div
       className="aAnimal"
@@ -18,10 +20,10 @@ export const Animals = ({ pet, imgUrl, ...props }) => {
 
       <div className="animal_info">
         <p className="animal_name"> {pet.attr}ibutes.name} </p>
-        {pet.attributes.sex === "Female" ? (
+        {pet.attributes.sex === 'Female' ? (
           <div className="sex">
-            {" "}
-            <img src="https://img.icons8.com/material/24/000000/female.png" />{" "}
+            {' '}
+            <img src="https://img.icons8.com/material/24/000000/female.png" />{' '}
           </div>
         ) : (
           <div className="sex">

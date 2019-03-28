@@ -2,7 +2,8 @@ import {
   GETTING_SINGLE_ANIMAL,
   GOT_SINGLE_ANIMAL_ERROR,
   GOT_SINGLE_ANIMAL,
-  SET_ANIMAL_ID
+  SET_ANIMAL_ID,
+  SET_ANIMAL_IMG
 } from '../constants';
 
 const initState = {
@@ -15,8 +16,8 @@ const initState = {
 export const singleAnimalReducer = (state = initState, action) => {
   let nextState;
   switch (action.type) {
-    case SET_ANIMAL_ID:
-      nextState = { ...state, selectedAnimalId: action.payload };
+    case SET_ANIMAL_IMG:
+      nextState = { ...state, selectedAnimalImg: action.payload };
       return nextState;
     case GETTING_SINGLE_ANIMAL:
       nextState = { ...state, loading: true };

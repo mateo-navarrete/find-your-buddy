@@ -10,9 +10,9 @@ let imgArr = [
 export const PetImgs = props => {
   let displayPetImgs = imgArr.map((img, i) => {
     return (
-      <>
+      <div key={i + 1}>
         <img className="petImg" src={img} />
-      </>
+      </div>
     );
   });
 
