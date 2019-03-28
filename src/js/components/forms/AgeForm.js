@@ -26,7 +26,6 @@ const Age = ({ isComplete, ...props }) => {
         materials. Thank you in advance for your cooperation!
       </p>
       <br />
-      <StyledApp />
       <StyledRadioGroup
         isComplete={isComplete}
         setAge={props.setAge}

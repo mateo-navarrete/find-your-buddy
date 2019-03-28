@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/logo.css";
 import "../../styles/navBar.css";
 import logo from "../../images/fyb.png";
+=======
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import '../../styles/logo.css';
+import '../../styles/navBar.css';
+import logo from '../../images/fyb.png';
+>>>>>>> 6dc18467624ea9d996d9c85d4193285caf5e9a85
 
 export const NavBar = props => {
   return (

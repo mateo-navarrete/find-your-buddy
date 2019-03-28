@@ -1,11 +1,13 @@
 import React from "react";
-import { InlineIcons } from ".";
+// import { InlineIcons } from ".";
+import StyledApp from "./StyledApp";
+
 
 export const Personal = props => {
   return (
     <>
       <div>CONTACT AND HOUSEHOLD INFORMATION </div>
-      <InlineIcons />
+      <StyledApp />
       <div>Name:_</div> <div>Email:_</div> <div>Address:_</div>
       <div> Street </div>
       <div> Apt. # </div>
