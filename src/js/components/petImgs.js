@@ -8,11 +8,11 @@ let imgArr = [
 ];
 
 export const PetImgs = props => {
-  let displayPetImgs = imgArr.map(img => {
+  let displayPetImgs = imgArr.map((img, i) => {
     return (
-      <>
+      <div key={i + 1}>
         <img src={img} />
-      </>
+      </div>
     );
   });
 
