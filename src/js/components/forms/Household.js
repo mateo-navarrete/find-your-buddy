@@ -4,7 +4,8 @@ import {
   Typography,
   TextField,
   Button,
-  Checkbox
+  Checkbox,
+  FormControlLabel
   // IconButton,
   // FormControl,
   // Select
@@ -55,7 +56,8 @@ class Household extends Component {
     own: false,
     house: false,
     apartment: false,
-    condo: false
+    condo: false,
+    rules: ""
   };
 
   handleChange = ({ target: { name, value } }) =>
@@ -73,7 +75,8 @@ class Household extends Component {
       own,
       house,
       apartment,
-      condo
+      condo,
+      rules
     } = this.state;
     const { classes } = this.props;
 
@@ -84,7 +87,7 @@ class Household extends Component {
         </Typography>
         <form onSubmit={this.handleCreate}>
           <div className="section1">
-            <p>People living in your household:</p>
+            <p className="peopleText">People living in your household:</p>
             <TextField
               name="name"
               label="Name"
@@ -118,49 +121,84 @@ class Household extends Component {
               margin="normal"
             />
           </div>
-          <div className="section2" />
-          <p>Type of Residence: </p>
-          <div className="section3">
-            <Checkbox
-              name="rent"
-              className="rent"
-              value={rent}
-              onChange={this.handleChange}
-              margin="normal"
+          <div className="housesection2">
+            <p className="resText">Type of Residence: </p>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="rent"
+                  className="rent"
+                  value={rent}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Rent"
             />
-            Rent
-            <Checkbox
-              name="own"
-              value={own}
-              onChange={this.handleChange}
-              margin="normal"
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="own"
+                  value={own}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Own"
             />
-            Own
           </div>
-          <br />
-          <div className="section3">
-            <p>Type of Home:</p>
-            <Checkbox
-              name="house"
-              value={house}
+
+          <div className="housesection3">
+            <p className="typeText">Type of Home:</p>
+            {""}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="house"
+                  value={house}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="House"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="apartment"
+                  value={apartment}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Apartment"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="condo"
+                  value={condo}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Condo"
+            />
+          </div>
+          <div className="housesection4">
+            <TextField
+              name="rules"
+              label="If Apartment/Condo, what are the rules about pets?"
+              className="rules"
+              value={rules}
               onChange={this.handleChange}
               margin="normal"
             />
-            House
-            <Checkbox
-              name="apartment"
-              value={apartment}
-              onChange={this.handleChange}
-              margin="normal"
-            />
-            Apartment
-            <Checkbox
-              name="condo"
-              value={condo}
-              onChange={this.handleChange}
-              margin="normal"
-            />
-            Condo
           </div>
         </form>
       </Paper>
