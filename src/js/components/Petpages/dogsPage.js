@@ -10,7 +10,7 @@ const DogPage = ({ included, data }) => {
 
   return (
     <>
-      <div className="pageTitle"> Papi? </div>
+      <div className="pageTitle"> Would you adopt a Papi? </div>
       <div className="animalContainer">
         <AnimalDisplayList included={included} data={data} />
       </div>
