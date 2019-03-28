@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../styles/logo.css';
-import '../../styles/navBar.css';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../styles/logo.css";
+import "../../styles/navBar.css";
+import logo from "../../image/fyblogo.png";
 
 export const NavBar = props => {
   return (
@@ -11,7 +11,7 @@ export const NavBar = props => {
         <Link to="/">
           <div className="flex align">
             <div className="logoDiv">
-              <img src="../../image/fyblogo.png" alt="" />
+              <img src={logo} alt="" />
             </div>
           </div>
         </Link>

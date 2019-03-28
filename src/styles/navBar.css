@@ -24,15 +24,20 @@
   width: 100wh;
   text-decoration: none;
   color: #234a56;
+<<<<<<< HEAD
+=======
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 1.2s;
+>>>>>>> 2ae2556c96574181056bab9c177cc1732d057324
 }
 
 .nav2 a:hover {
   letter-spacing: 2px;
   color: white;
   background-color: #417d95;
+<<<<<<< HEAD
+=======
   transition: 0.64s;
   opacity: 50%;
 }
@@ -40,4 +45,5 @@
 .nav2 a:active {
   letter-spacing: -5px;
   opacity: 30%;
+>>>>>>> 2ae2556c96574181056bab9c177cc1732d057324
 }
