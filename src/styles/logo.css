@@ -50,11 +50,7 @@
 
 .logoDiv:hover {
   animation-name: example;
-<<<<<<< HEAD
   animation-duration: 6s;
-=======
-  animation-duration: 5s;
->>>>>>> 993c531581b30e43feded56ee171e8c128fd748f
   animation-iteration-count: infinite;
   cursor: pointer;
 }
