@@ -1,4 +1,6 @@
 .logoDiv {
+  margin-top: 10px;
+  margin-left: 10px;
   height: 50px;
   width: 80px;
 }
@@ -33,6 +35,7 @@
 .logoDiv:hover {
   animation-name: example;
   animation-duration: 5s;
+
   animation-iteration-count: infinite;
   cursor: pointer;
 }
