@@ -1,10 +1,10 @@
-import { GETTING_CATS, GOT_CAT_ERROR, GOT_CATS } from '../constants';
+import { GETTING_CATS, GOT_CAT_ERROR, GOT_CATS } from "../constants";
 
 const initState = {
   data: [],
   included: [],
   meta: [],
-  loading: false,
+  loading: false
 };
 
 export const catsReducer = (state = initState, action) => {
@@ -24,7 +24,7 @@ export const catsReducer = (state = initState, action) => {
         loading: true,
         data: data,
         included: included,
-        meta: meta,
+        meta: meta
       };
       console.log(nextState, action.payload);
       return nextState;

@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { getDogs } from "../actions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getDogs } from '../actions';
 
 const mapStateToProps = ({ dogsReducer }) => {
   return {
     data: dogsReducer.data,
     meta: dogsReducer.meta,
     loading: dogsReducer.loading,
-    included: dogsReducer.included
+    included: dogsReducer.included,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    getDogs: size => dispatch(getDogs(size))
+    getDogs: size => dispatch(getDogs(size)),
   };
 };
 
