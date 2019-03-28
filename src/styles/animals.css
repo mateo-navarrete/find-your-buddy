@@ -22,3 +22,86 @@ li>div img {
   height: 100px;
 }
 
+
+.pageTitle {
+  padding-top: 50px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  padding-bottom: 50px;
+}
+
+.animalContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.aAnimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.profileImg {
+  box-shadow: 10px 1px 15px -5px #001b46;
+  text-align: center;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 300px;
+  height: 350px;
+  border: 20px solid rgba(193, 222, 226, 0.846);
+  border-bottom: 100px solid #C1DEE2;
+  border-radius: 10px;
+
+}
+
+.profileImg:hover {
+  width: 320px;
+  height: 370px;
+  transition: .3s;
+  box-shadow: 5px 1px 15px -5px #03070e;
+
+}
+
+.profileImg:active {
+  width: 310px;
+  height: 330px;
+  transition: .3s;
+}
+
+/* .animalContainer .aAnimal p {} */
+
+.animal_info {
+  font-size: 15.7px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin: 10px;
+  width: 250px;
+  height: 20px;
+  white-space: pre-wrap;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  position: relative;
+  top: -88px;
+  z-index: 0;
+
+}
+
+.animal_name {
+  font-size: 23px;
+  font-weight: bolder;
+  overflow: hidden;
+  height: 23px;
+}
+
+.sex {
+  font-weight: bolder;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 250px;
+}

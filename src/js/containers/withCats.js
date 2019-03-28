@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getCats } from '../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { getCats } from "../actions";
 
 const mapStateToProps = ({ catsReducer }) => {
   return {
     data: catsReducer.data,
     meta: catsReducer.meta,
     loading: catsReducer.loading,
-    included: catsReducer.included,
+    included: catsReducer.included
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    getCats: size => dispatch(getCats(size)),
+    getCats: size => dispatch(getCats(size))
   };
 };
 
-const WithCats = WrappedComponent => {
+const withCats = WrappedComponent => {
   class HOC extends Component {
     componentDidMount() {
       this.props.getCats();
@@ -33,4 +33,4 @@ const WithCats = WrappedComponent => {
   )(HOC);
 };
 
-export default WithCats;
+export default withCats;

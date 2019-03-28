@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-// import Radio from "./Radio";
 
 export default class RadioGroup extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     const { options, id, label } = this.props;
     const renderOptions = options.map((option, i) => {
@@ -18,7 +13,6 @@ export default class RadioGroup extends Component {
             value={option.value}
             // checked={option.value === option.value} //{favorite === "dogs"}
             onChange={this.onRadioChange}
-            // id={option.id}
           />
           <br />
         </div>

@@ -1,10 +1,11 @@
 import React from "react";
+import { InlineIcons } from ".";
 
 export const Personal = props => {
   return (
     <>
-      <div>2/6 Personal</div>
       <div>CONTACT AND HOUSEHOLD INFORMATION </div>
+      <InlineIcons />
       <div>Name:_</div> <div>Email:_</div> <div>Address:_</div>
       <div> Street </div>
       <div> Apt. # </div>
