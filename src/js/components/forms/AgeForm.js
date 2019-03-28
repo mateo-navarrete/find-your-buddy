@@ -1,5 +1,6 @@
 import React from "react";
-import { RadioGroup } from ".";
+// import { RadioGroup } from ".";
+import { StyledRadioGroup } from "..";
 import { withAge } from "../../containers";
 
 const Age = ({ id, is18, label, options, ...props }) => {
@@ -25,19 +26,26 @@ const Age = ({ id, is18, label, options, ...props }) => {
         materials. Thank you in advance for your cooperation!
       </p>
       <br />
-      <form onChange={e => props.setAge(e.target.value)}>
-        <RadioGroup id={id} label={label} options={options} />
-      </form>
-      <br />
-      {is18 ? (
-        <button name="intro" onClick={props.handleNext}>
-          next
-        </button>
-      ) : (
-        "You must be 18 to adopt a pet."
-      )}
+      <StyledRadioGroup
+        is18={is18}
+        setAge={props.setAge}
+        handleNext={props.handleNext}
+      />
     </>
   );
 };
 
 export const AgeForm = withAge(Age);
+
+// <form onChange={e => props.setAge(e.target.value)}>
+//   <RadioGroup id={id} label={label} options={options} />
+// </form>
+// <br />
+// {is18 ? (
+//   <button name="intro" onClick={props.handleNext}>
+//     next
+//   </button>
+// ) : (
+//   "You must be 18 to adopt a pet."
+// )}
+// </>

@@ -17,7 +17,7 @@ export const ageReducer = (state = initState, action) => {
   switch (action.type) {
     case SET_AGE:
       is18 = action.payload === 'true';
-      console.log(action.payload, is18);
+      // console.log(action.payload, is18);
       nextState = { ...state, is18: is18 };
       return nextState;
     default:
