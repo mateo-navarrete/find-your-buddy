@@ -53,7 +53,7 @@ export default class FormPage extends Component {
       // is18Options,
       // message
     } = this.state;
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <>
         <div>Pet Adoption Questionnaire</div>
