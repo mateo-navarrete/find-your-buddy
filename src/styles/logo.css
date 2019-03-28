@@ -5,37 +5,51 @@
   width: 80px;
 }
 
+.fyblogo:hover {
+  opacity: 0;
+}
+
 @keyframes example {
-  25% {
+  0% {
     background-image: url("https://img.icons8.com/ios/50/000000/doge.png");
     background-repeat: no-repeat;
-    width: 80px;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+  }
+  25% {
+    background-image: url("https://img.icons8.com/carbon-copy/100/000000/cat-footprint.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
     height: 50px;
   }
   50% {
-    background-image: url("https://img.icons8.com/carbon-copy/100/000000/dog-footprint.png");
+    background-image: url("https://img.icons8.com/wired/64/000000/cat.png");
     background-repeat: no-repeat;
-    width: 80px;
+    background-size: contain;
+    width: 50px;
     height: 50px;
   }
   75% {
-    background-image: url("https://img.icons8.com/wired/64/000000/cat.png");
+    background-image: url("https://img.icons8.com/carbon-copy/100/000000/dog-footprint.png");
     background-repeat: no-repeat;
-    width: 80px;
+    background-size: contain;
+    width: 50px;
     height: 50px;
   }
   100% {
-    background-image: url("https://img.icons8.com/carbon-copy/100/000000/cat-footprint.png");
+    background-image: url("https://img.icons8.com/ios/50/000000/doge.png");
     background-repeat: no-repeat;
-    width: 80px;
+    background-size: contain;
+    width: 50px;
     height: 50px;
   }
 }
 
 .logoDiv:hover {
   animation-name: example;
-  animation-duration: 5s;
-
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   cursor: pointer;
 }
