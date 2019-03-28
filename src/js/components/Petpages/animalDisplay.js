@@ -17,7 +17,7 @@ export const AnimalDisplay = ({ included, data }) => {
     let imgId = pet.relationships.pictures.data;
 
     if (imgId.length !== 0) {
-      let petImg = imgId.pop();
+      let petImg = imgId[0];
       let imgUrl = imgObj[petImg.id];
       if (pet.attributes.name) {
         return (
