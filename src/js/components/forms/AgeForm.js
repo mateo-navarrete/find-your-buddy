@@ -2,6 +2,7 @@ import React from "react";
 // import { RadioGroup } from ".";
 import { StyledRadioGroup } from "..";
 import { withAge } from "../../containers";
+import StyledApp from "./StyledApp";
 
 const Age = ({ isComplete, ...props }) => {
   return (
@@ -25,6 +26,7 @@ const Age = ({ isComplete, ...props }) => {
         materials. Thank you in advance for your cooperation!
       </p>
       <br />
+      <StyledApp />
       <StyledRadioGroup
         isComplete={isComplete}
         setAge={props.setAge}
