@@ -11,7 +11,7 @@ export const NavBar = props => {
         <Link to="/">
           <div className="flex align">
             <div className="logoDiv">
-              <img src="../../image/fyblogo.png" alt="" />
+              <img src="" alt="" />
             </div>
           </div>
         </Link>

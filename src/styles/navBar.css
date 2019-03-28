@@ -26,9 +26,6 @@
   width: 100wh;
   text-decoration: none;
   color: #234a56;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: 1.2s;
 }
 
 .nav2 a:hover {
