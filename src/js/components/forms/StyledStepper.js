@@ -1,35 +1,36 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { AdoptInfo, Household, AgeForm, Outro, Personal, PetStatus } from '.';
-import { withSteps } from '../../containers';
-
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import { AdoptInfo, Household, AgeForm, Outro, Personal, PetStatus } from ".";
+import { withSteps } from "../../containers";
+import "../../../styles/congrats.css";
 const styles = theme => ({
   root: {
-    width: '90%',
+    width: "90%"
   },
   backButton: {
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing.unit
   },
   instructions: {
     marginTop: theme.spacing.unit,
-    marginBottom: theme.spacing.unit,
-  },
+    marginBottom: theme.spacing.unit
+  }
 });
 
 function getSteps() {
   return [
-    'Age Verification',
-    'Contact Info',
-    'Household',
-    'Pet History',
-    'Adopt Info',
-    'Confirmation',
+    "Age Verification",
+    "Contact Info",
+    "Household",
+    "Pet History",
+    "Adopt Info",
+    "Confirmation"
   ];
 }
 
@@ -49,30 +50,30 @@ function getStepContent(stepIndex) {
     case 5:
       return <Outro />;
     default:
-      return 'Unknown stepIndex';
+      return "Unknown stepIndex";
   }
 }
 
 class HorizontalLabelPositionBelowStepper extends React.Component {
   state = {
-    activeStep: 0,
+    activeStep: 0
   };
 
   handleNext = () => {
     this.setState(state => ({
-      activeStep: state.activeStep + 1,
+      activeStep: state.activeStep + 1
     }));
   };
 
   handleBack = () => {
     this.setState(state => ({
-      activeStep: state.activeStep - 1,
+      activeStep: state.activeStep - 1
     }));
   };
 
   handleReset = () => {
     this.setState({
-      activeStep: 0,
+      activeStep: 0
     });
   };
 
@@ -80,7 +81,7 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
     const { classes, isAgeComplete } = this.props;
     const steps = getSteps();
     const { activeStep } = this.state;
-    console.log('@', this.props, isAgeComplete);
+    console.log("@", this.props, isAgeComplete);
     const isActive = activeStep === 0 ? !isAgeComplete : false;
     return (
       <div className={classes.root}>
@@ -94,10 +95,15 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
         <div>
           {this.state.activeStep === steps.length ? (
             <div>
-              <Typography className={classes.instructions}>
-                All steps completed
-              </Typography>
-              <Button onClick={this.handleReset}>Reset</Button>
+              <Paper>
+                <Typography className={classes.instructions}>
+                  <p className="congrats">
+                    Congratulation!
+                    <br /> <br /> You found your buddy.
+                  </p>
+                </Typography>
+                <Button onClick={this.handleReset}>Reset</Button>
+              </Paper>
             </div>
           ) : (
             <div>
@@ -118,7 +124,7 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
                   color="primary"
                   onClick={this.handleNext}
                 >
-                  {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                  {activeStep === steps.length - 1 ? "Finish" : "Next"}
                 </Button>
               </div>
             </div>
@@ -130,7 +136,7 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
 }
 
 HorizontalLabelPositionBelowStepper.propTypes = {
-  classes: PropTypes.object,
+  classes: PropTypes.object
 };
 
 export default withSteps(

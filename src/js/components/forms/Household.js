@@ -3,7 +3,9 @@ import {
   Paper,
   Typography,
   TextField,
-  Button
+  Button,
+  Checkbox,
+  FormControlLabel
   // IconButton,
   // FormControl,
   // Select
@@ -47,14 +49,15 @@ const styles = ({ spacing: { unit } }) => ({
 class Household extends Component {
   state = {
     name: "",
-    email: "",
-    address: "",
-    street: "",
-    apt: "",
-    city: "",
-    state: "",
-    zipCode: "",
-    phone: ""
+    contact: "",
+    relationship: "",
+    age: "",
+    rent: false,
+    own: false,
+    house: false,
+    apartment: false,
+    condo: false,
+    rules: ""
   };
 
   handleChange = ({ target: { name, value } }) =>
@@ -65,14 +68,15 @@ class Household extends Component {
   render() {
     const {
       name,
-      email,
-      address,
-      street,
-      apt,
-      city,
-      state,
-      zipCode,
-      phone
+      contact,
+      relationship,
+      age,
+      rent,
+      own,
+      house,
+      apartment,
+      condo,
+      rules
     } = this.state;
     const { classes } = this.props;
 
@@ -83,81 +87,115 @@ class Household extends Component {
         </Typography>
         <form onSubmit={this.handleCreate}>
           <div className="section1">
+            <p className="peopleText">People living in your household:</p>
             <TextField
-              name="household"
+              name="name"
               label="Name"
-              className="name"
+              className="householdname"
               value={name}
               onChange={this.handleChange}
               margin="normal"
             />
             <TextField
-              name="email"
-              label="Email"
-              className="email"
-              value={email}
+              name="contact"
+              label="Contact Number"
+              className="contact"
+              value={contact}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="relationship"
+              label="Relationship"
+              className="relationship"
+              value={relationship}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="age"
+              label="Age"
+              className="age"
+              value={age}
               onChange={this.handleChange}
               margin="normal"
             />
           </div>
-          <div className="section2">
-            <TextField
-              name="address"
-              label="Address"
-              className="address"
-              value={address}
-              onChange={this.handleChange}
-              margin="normal"
+          <div className="housesection2">
+            <p className="resText">Type of Residence: </p>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="rent"
+                  className="rent"
+                  value={rent}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Rent"
             />
-            <TextField
-              name="street"
-              label="Street"
-              className="address"
-              value={street}
-              onChange={this.handleChange}
-              margin="normal"
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="own"
+                  value={own}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Own"
             />
           </div>
-          <div className="section3">
-            <TextField
-              name="apt"
-              label="Apt #"
-              className="smallText"
-              value={apt}
-              onChange={this.handleChange}
-              margin="normal"
-            />
 
-            <TextField
-              name="city"
-              label="City"
-              className="smallText"
-              value={city}
-              onChange={this.handleChange}
-              margin="normal"
+          <div className="housesection3">
+            <p className="typeText">Type of Home:</p>
+            {""}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="house"
+                  value={house}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="House"
             />
-
-            <TextField
-              name="state"
-              label="State"
-              className="smallText"
-              value={state}
-              onChange={this.handleChange}
-              margin="normal"
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="apartment"
+                  value={apartment}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Apartment"
             />
-
-            <TextField
-              name="zipCode"
-              label="ZipCode"
-              className="smallText"
-              value={zipCode}
-              onChange={this.handleChange}
-              margin="normal"
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="condo"
+                  value={condo}
+                  onChange={this.handleChange}
+                  margin="normal"
+                  color="primary"
+                />
+              }
+              label="Condo"
             />
+          </div>
+          <div className="housesection4">
             <TextField
-              name="phone"
-              label="Phone"
-              value={phone}
+              name="rules"
+              label="If Apartment/Condo, what are the rules about pets?"
+              className="rules"
+              value={rules}
               onChange={this.handleChange}
               margin="normal"
             />
