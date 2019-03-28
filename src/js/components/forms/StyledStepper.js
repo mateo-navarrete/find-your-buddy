@@ -101,9 +101,9 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
             </div>
           ) : (
             <div>
-              <Typography className={classes.instructions}>
+              <div className={classes.instructions}>
                 {getStepContent(activeStep)}
-              </Typography>
+              </div>
               <div>
                 <Button
                   disabled={activeStep === 0}
@@ -136,3 +136,7 @@ HorizontalLabelPositionBelowStepper.propTypes = {
 export default withSteps(
   withStyles(styles)(HorizontalLabelPositionBelowStepper)
 );
+
+// <Typography className={classes.instructions}>
+//   {getStepContent(activeStep)}
+// </Typography>
