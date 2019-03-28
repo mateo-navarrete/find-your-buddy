@@ -1,13 +1,15 @@
 .primary {
+  position: sticky;
+  top: 0;
   font-family: "Rubik", sans-serif;
   font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 75px;
-  background-color: rgba(221, 231, 220, 0.719);
+  background-color: rgb(221, 231, 220);
   /* border: 1px solid black; */
-  box-shadow: 2px 1px 15px -5px #bdbdbd;
+  box-shadow: 4px 1px 15px -5px #bdbdbd;
 }
 
 .nav2 {
