@@ -6,6 +6,8 @@ const mapStateToProps = ({ singleAnimalReducer }) => {
   return {
     data: singleAnimalReducer.data,
     meta: singleAnimalReducer.meta,
+    singleAnimalId: singleAnimalReducer.singleAnimalId,
+    singleAnimalImg: singleAnimalReducer.singleAnimalImg,
     loading: singleAnimalReducer.loading
   };
 };
@@ -19,7 +21,8 @@ const mapDispatchToProps = dispatch => {
 const withSingleAnimal = WrappedComponent => {
   class HOC extends Component {
     componentDidMount() {
-      this.props.getSingleAnimal();
+      console.log("@@", this.props);
+      this.props.getSingleAnimal(this.props.singleAnimalId);
     }
 
     render() {
@@ -33,3 +36,5 @@ const withSingleAnimal = WrappedComponent => {
 };
 
 export default withSingleAnimal;
+
+//animals:state. animals.(props.match.params.id)

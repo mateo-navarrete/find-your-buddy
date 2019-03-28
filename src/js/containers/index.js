@@ -1,7 +1,7 @@
-import withDogs from './withDogs';
-import withCats from './withCats';
-import withSingleAnimal from './withSingleAnimal';
+import withDogs from "./withDogs";
+import withCats from "./withCats";
+import withSingleAnimal from "./withSingleAnimal";
 
-import { withAge, withSteps } from './forms';
+import { withAge, withSteps } from "./forms";
 
-export { withCats, withDogs, withAge, withSteps };
+export { withCats, withDogs, withAge, withSteps, withSingleAnimal };

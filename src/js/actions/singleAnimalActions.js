@@ -1,7 +1,10 @@
 import {
   GETTING_SINGLE_ANIMAL,
   GOT_SINGLE_ANIMAL_ERROR,
-  GOT_SINGLE_ANIMAL
+  GOT_SINGLE_ANIMAL,
+  SET_ANIMAL_IMG,
+  SET_ANIMAL_ID,
+  SET_ANIMAL_INFO
 } from "../constants";
 
 import { getAnimalData } from "../utils";
@@ -9,6 +12,18 @@ import { getAnimalData } from "../utils";
 
 export const gettingSingleAnimal = () => {
   return { type: GETTING_SINGLE_ANIMAL };
+};
+
+export const settingAnimalInfo = () => {
+  return { type: SET_ANIMAL_INFO };
+};
+
+export const setAnimalImg = imgUrl => {
+  return { type: SET_ANIMAL_IMG, payload: imgUrl };
+};
+
+export const setAnimalId = id => {
+  return { type: GOT_SINGLE_ANIMAL_ERROR, payload: id };
 };
 
 export const gotError = err => {
