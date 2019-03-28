@@ -104,3 +104,64 @@ li>div img {
   top: 0px;
   left: 250px;
 }
+
+.animals_links {
+  text-decoration: none;
+  color: black;
+}
+
+
+.aprofile {
+  /* position: relative;
+  background: url("https://s3.amazonaws.com/filestore.rescuegroups.org/5166/pictures/animals/10006/10006340/59898875_500x667.jpg");
+  filter: blur(10px); */
+  /* background-repeat: no-repeat; */
+  margin: 10px;
+  width: 450px;
+  height: auto;
+  border: 1px solid white;
+  background-size: 100vw;
+  /* margin-left: 30%; */
+  z-index: 1;
+}
+
+.aprofile img {
+  width: 200px;
+  height: auto;
+  border: 1px solid white;
+}
+
+.aprofile {
+  font-size: 30.7px;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  width: 100vw;
+}
+
+.aprofile_grid {
+  display: grid;
+  grid-template-columns: .1fr 1fr;
+  grid-gap: 10px;
+  margin: 10%;
+  padding: 10px;
+  z-index: 0;
+}
+
+.grid_info {
+  font-size: 25px;
+  text-align: left;
+}
+
+.grid_info h1 {
+  height: 77px;
+}
+
+b {
+  font-family: 'Acme';
+  font-weight: bolder;
+  font-size: 44px;
+  color: white;
+  letter-spacing: 2px;
+
+}
