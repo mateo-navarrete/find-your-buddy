@@ -3,7 +3,7 @@ import React from "react";
 export const PetStatus = props => {
   return (
     <>
-      <div>PetStatus</div>
+      <div>4/6 PetStatus</div>
       <div>LIST BELOW ALL PETS CURRENTLY LIVING IN YOUR HOUSEHOLD </div>
       <div>Species/Breed? </div>
 
@@ -30,6 +30,12 @@ export const PetStatus = props => {
         PERSONAL REFERENCES: Name Relationship to Adopter Contact information
       </div>
       <br />
+      <button name="petStatus" onClick={props.handleBack}>
+        back
+      </button>
+      <button name="petStatus" onClick={props.handleNext}>
+        next
+      </button>
     </>
   );
 };
