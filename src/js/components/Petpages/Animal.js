@@ -19,7 +19,7 @@ export const Animals = ({ pet, imgUrl, ...props }) => {
       <img className="profileImg" src={imgUrl} />
 
       <div className="animal_info">
-        <p className="animal_name"> {pet.attr}ibutes.name} </p>
+        <p className="animal_name"> {pet.attributes.name} </p>
         {pet.attributes.sex === 'Female' ? (
           <div className="sex">
             {' '}

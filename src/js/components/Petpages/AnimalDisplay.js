@@ -25,7 +25,7 @@ export const AnimalDisplay = ({ pet, imgUrl, ...props }) => {
 
   return (
     <div>
-      <Link to={animalUrl}>
+      <Link className = "animals_links" to={animalUrl}>
         <Animal pet={pet} imgUrl={imgUrl} {...props} />
       </Link>
     </div>
