@@ -53,8 +53,8 @@ li>div img {
   object-position: 50% 50%;
   width: 300px;
   height: 350px;
-  border: 20px solid white;
-  border-bottom: 100px solid white;
+  border: 20px solid rgba(193, 222, 226, 0.846);
+  border-bottom: 100px solid #C1DEE2;
   border-radius: 10px;
 
 }
@@ -63,6 +63,8 @@ li>div img {
   width: 320px;
   height: 370px;
   transition: .3s;
+  box-shadow: 5px 1px 15px -5px #03070e;
+
 }
 
 .profileImg:active {
@@ -87,6 +89,13 @@ li>div img {
   top: -88px;
   z-index: 0;
 
+}
+
+.animal_name {
+  font-size: 23px;
+  font-weight: bolder;
+  overflow: hidden;
+  height: 23px;
 }
 
 .sex {
