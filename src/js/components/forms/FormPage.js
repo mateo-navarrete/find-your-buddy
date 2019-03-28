@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AdoptInfo, Household, Intro, Outro, Personal, PetStatus } from ".";
+import { AdoptInfo, Household, AgeForm, Outro, Personal, PetStatus } from ".";
 
 export default class FormPage extends Component {
   state = {
@@ -8,13 +8,7 @@ export default class FormPage extends Component {
     household: false,
     petStatus: false,
     adoptInfo: false,
-    outro: false,
-    is18Label: "Are you 18 years of age or older",
-    is18Options: [
-      { id: 1, value: "Yes", label: "Yes " },
-      { id: 2, value: "No", label: "No " }
-    ],
-    message: ""
+    outro: false
   };
   handleNext = e => {
     const { name } = e.target;
@@ -54,27 +48,16 @@ export default class FormPage extends Component {
       household,
       petStatus,
       adoptInfo,
-      outro,
-      is18Label,
-      is18Options,
-      message
+      outro
+      // is18Label,
+      // is18Options,
+      // message
     } = this.state;
     console.log(this.state);
     return (
       <>
         <div>Pet Adoption Questionnaire</div>
-        {intro ? (
-          <Intro
-            handleNext={this.handleNext}
-            handleChange={this.handleChange}
-            id="is18"
-            label={is18Label}
-            options={is18Options}
-            message={message}
-          />
-        ) : (
-          ""
-        )}
+        {intro ? <AgeForm handleNext={this.handleNext} /> : ""}
         {personal ? (
           <Personal handleNext={this.handleNext} handleBack={this.handleBack} />
         ) : (
