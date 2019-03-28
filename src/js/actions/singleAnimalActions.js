@@ -35,6 +35,7 @@ export const gotSingleAnimal = cats => {
 };
 
 export const getSingleAnimal = animalId => dispatch => {
+  console.log("one animal", animalId);
   let animalApi = `https://api.rescuegroups.org/v5/public/animals/${animalId}?fields[animals]=name,sex,ageString,descriptionText,sizeGroup,isKidsOk,isHousetrained,killDate,pictureCount,url,summary,pictureThumbnailUrl&fields[orgs]=name,email,url,facebookUrl,adoptionUrl&fields[breeds]=name&fields[colors]=name&fields[fosters]=name,email&fields[locations]=name&fields[patterns]=name&fields[pictures]=large,small&fields[species]=singular&fields[videos]=url&fields[videourls]=url,urlThumbnail&options=meta`;
 
   dispatch(gettingSingleAnimal());

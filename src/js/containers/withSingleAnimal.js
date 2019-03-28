@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { getSingleAnimal } from "../actions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getSingleAnimal, setAnimalId } from '../actions';
 
-const mapStateToProps = ({ singleAnimalReducer }) => {
+const mapStateToProps = ({ singleAnimalReducer, willAdoptReducer }) => {
   return {
     data: singleAnimalReducer.data,
-    meta: singleAnimalReducer.meta,
     singleAnimalId: singleAnimalReducer.singleAnimalId,
+    willAdoptId: willAdoptReducer.willAdoptId,
     singleAnimalImg: singleAnimalReducer.singleAnimalImg,
-    loading: singleAnimalReducer.loading
+    loading: singleAnimalReducer.loading,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    getSingleAnimal: animalId => dispatch(getSingleAnimal(animalId))
+    getSingleAnimal: animalId => dispatch(getSingleAnimal(animalId)),
   };
 };
 
 const withSingleAnimal = WrappedComponent => {
   class HOC extends Component {
     componentDidMount() {
-      console.log("@@", this.props);
-      this.props.getSingleAnimal(this.props.singleAnimalId);
+      console.log('@@', this.props.willAdoptId);
+      this.props.getSingleAnimal(this.props.willAdoptId);
     }
 
     render() {

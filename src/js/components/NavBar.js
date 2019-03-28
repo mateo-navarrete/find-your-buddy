@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import '../../styles/logo.css';
-import '../../styles/navBar.css';
-import logo from '../../images/fyb.png';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import "../../styles/logo.css";
+import "../../styles/navBar.css";
+import logo from "../../images/fyb.png";
 
 export const NavBar = props => {
   return (

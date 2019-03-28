@@ -7,12 +7,25 @@
 
 .about {
   margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+
   font-family: "Rubik", sans-serif;
   font-size: 20px;
   text-align: center;
+
 }
 
-.aboutSection {
-  width: 500px;
-  height: 200px;
+.petpics {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-gap: 40px;
+  justify-content: center;
 }
+
+.petImg {
+  object-fit: cover;
+  height: 350px;
+  width: 300px;
+}
+

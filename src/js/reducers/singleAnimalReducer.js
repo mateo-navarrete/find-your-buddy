@@ -3,14 +3,13 @@ import {
   GOT_SINGLE_ANIMAL_ERROR,
   GOT_SINGLE_ANIMAL,
   SET_ANIMAL_ID
-} from "../constants";
+} from '../constants';
 
 const initState = {
   data: [],
-  meta: [],
-  selectedAnimalId: "",
-  selectedAnimalImg: "",
-  loading: false
+  selectedAnimalId: '',
+  selectedAnimalImg: '',
+  loading: false,
 };
 
 export const singleAnimalReducer = (state = initState, action) => {
@@ -32,7 +31,6 @@ export const singleAnimalReducer = (state = initState, action) => {
         ...state,
         loading: true,
         data: data,
-        meta: meta
       };
       console.log(nextState, action.payload);
       return nextState;
