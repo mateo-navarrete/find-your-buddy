@@ -7,9 +7,13 @@
 
 .about {
   margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+
   font-family: "Rubik", sans-serif;
   font-size: 20px;
   text-align: center;
+
 }
 
 .petpics {
@@ -24,3 +28,4 @@
   height: 350px;
   width: 300px;
 }
+
