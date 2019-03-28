@@ -35,7 +35,7 @@ li>div img {
 .animalContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  grid-gap: 20px;
 }
 
 .aAnimal {
@@ -43,10 +43,10 @@ li>div img {
   flex-direction: column;
   align-items: center;
 
-
 }
 
-.animalContainer .aAnimal img {
+
+.profileImg {
   box-shadow: 10px 1px 15px -5px #001b46;
   text-align: center;
   object-fit: cover;
@@ -59,19 +59,40 @@ li>div img {
 
 }
 
-.animalContainer .aAnimal img:hover {
-  object-fit: cover;
-  object-position: 55% 55%;
+.profileImg:hover {
+  width: 320px;
+  height: 370px;
+  transition: .3s;
 }
 
-.animalContainer .aAnimal p {
+.profileImg:active {
+  width: 310px;
+  height: 330px;
+  transition: .3s;
+}
+
+/* .animalContainer .aAnimal p {} */
+
+.animal_info {
+  font-size: 15.7px;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   margin: 10px;
   width: 250px;
   height: 20px;
-  overflow: hidden;
+  white-space: pre-wrap;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
   position: relative;
   top: -88px;
   z-index: 0;
+
+}
+
+.sex {
+  font-weight: bolder;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 250px;
 }
