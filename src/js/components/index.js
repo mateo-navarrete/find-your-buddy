@@ -1,4 +1,6 @@
 import { CatsPage } from './Petpages/catsPage';
+import { AnimalPage } from './Petpages/AnimalPage';
+
 import { DogsPage } from './Petpages/dogsPage';
 import { FormPage } from './forms';
 import { HomePage } from './HomePage';
@@ -10,6 +12,7 @@ import { SwitchRouter } from './SwitchRouter';
 
 export {
   CatsPage,
+  AnimalPage,
   DogsPage,
   FormPage,
   HomePage,

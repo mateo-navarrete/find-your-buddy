@@ -1,19 +1,25 @@
 import React from 'react';
 // import { AnimalsPictures } from './AnimalPictures';
-import { withWillAdopt } from '../../containers';
+import { withWillAdopt, withSingleAnimal } from '../../containers';
 
 export const Animals = ({ pet, imgUrl, ...props }) => {
+  // console.log("imgurl", imgUrl);
+  let animalUrl = `/animals/${pet.id}`;
+
   return (
     <div
       className="aAnimal"
       id={pet.id}
       key={pet.id}
-      onClick={() => props.setWillAdoptID(pet.id)}
+      onClick={() => {
+        props.setWillAdoptID(pet.id);
+        props.getSingleAnimal(pet.id);
+      }}
     >
       <img className="profileImg" src={imgUrl} />
 
       <div className="animal_info">
-        <p className="animal_name"> {pet.attributes.name} </p>
+        <p className="animal_name"> {pet.attr}ibutes.name} </p>
         {pet.attributes.sex === 'Female' ? (
           <div className="sex">
             {' '}
@@ -31,4 +37,4 @@ export const Animals = ({ pet, imgUrl, ...props }) => {
   );
 };
 
-export const Animal = withWillAdopt(Animals);
+export const Animal = withWillAdopt(withSingleAnimal(Animals));
