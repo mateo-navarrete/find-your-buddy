@@ -3,10 +3,7 @@ import { withCats } from "../containers";
 import { PetImgs } from "./petImgs";
 import "../../styles/homePage.css";
 
-
-
-//Jacky 
-
+//Jacky
 
 export const Home = props => {
   return (

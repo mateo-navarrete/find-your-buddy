@@ -1,5 +1,6 @@
-import { getCats } from './catActions';
-import { getDogs } from './dogActions';
-import { setAge } from './forms';
+import { getCats } from "./catActions";
+import { getDogs } from "./dogActions";
+import { getSingleAnimal } from "./singleAnimalActions";
+import { setAge } from "./forms";
 
-export { getCats, getDogs, setAge };
+export { getCats, getDogs, setAge, getSingleAnimal };
