@@ -3,7 +3,7 @@ import React from "react";
 import { StyledRadioGroup } from "..";
 import { withAge } from "../../containers";
 
-const Age = ({ id, is18, label, options, ...props }) => {
+const Age = ({ isComplete, ...props }) => {
   return (
     <>
       <p>
@@ -26,7 +26,7 @@ const Age = ({ id, is18, label, options, ...props }) => {
       </p>
       <br />
       <StyledRadioGroup
-        is18={is18}
+        isComplete={isComplete}
         setAge={props.setAge}
         handleNext={props.handleNext}
       />

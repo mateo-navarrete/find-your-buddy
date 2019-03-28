@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = ({ ageReducer }) => {
   return {
-    is18: ageReducer.is18,
+    isAgeComplete: ageReducer.isComplete,
   };
 };
 
