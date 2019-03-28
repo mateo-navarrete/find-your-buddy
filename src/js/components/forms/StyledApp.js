@@ -17,6 +17,7 @@ import {
 // import { Delete } from '@material-ui/icons';
 // import { withStyles } from 'material-ui/styles';
 import { withStyles } from "@material-ui/core/styles";
+import "../../../styles/forms.css";
 
 // import { Consumer } from './context';
 
@@ -45,12 +46,15 @@ const styles = ({ spacing: { unit } }) => ({
 // @withStyles(styles)
 class StyledApp extends Component {
   state = {
-    exercises: [
-      { id: 1, title: "Bench Press" },
-      { id: 2, title: "Deadlift" },
-      { id: 3, title: "Squats" }
-    ],
-    title: ""
+    name: "",
+    email: "",
+    address: "",
+    street: "",
+    apt: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    phone: ""
   };
 
   handleChange = ({ target: { name, value } }) =>
@@ -58,112 +62,106 @@ class StyledApp extends Component {
       [name]: value
     });
 
-  handleCreate = e => {
-    e.preventDefault();
-
-    if (this.state.title) {
-      this.setState(({ exercises, title }) => ({
-        exercises: [
-          ...exercises,
-          {
-            title,
-            id: Date.now()
-          }
-        ],
-        title: ""
-      }));
-    }
-  };
-
-  handleDelete = id =>
-    this.setState(({ exercises }) => ({
-      exercises: exercises.filter(ex => ex.id !== id)
-    }));
-
   render() {
-    const { title } = this.state;
+    const {
+      name,
+      email,
+      address,
+      street,
+      apt,
+      city,
+      state,
+      zipCode,
+      phone
+    } = this.state;
     const { classes } = this.props;
 
     return (
-      <Paper className={classes.root}>
+      <Paper className="paperStyle">
         <Typography variant="display1" align="center" gutterBottom>
-          address
+          CONTACT INFORMATION
         </Typography>
         <form onSubmit={this.handleCreate}>
-          <TextField
-            name="title"
-            label="Name"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="Email"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="Address"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="Street"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="Apt #"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="City"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="State"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="Name"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            name="title"
-            label="ZipCode"
-            value={title}
-            onChange={this.handleChange}
-            margin="normal"
-          />
-          <Button type="submit" color="primary" variant="raised">
-            Create
-          </Button>
+          <div className="section1">
+            <TextField
+              name="name"
+              label="Name"
+              className="name"
+              value={name}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="email"
+              label="Email"
+              className="email"
+              value={email}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+          </div>
+          <div className="section2">
+            <TextField
+              name="address"
+              label="Address"
+              className="address"
+              value={address}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="street"
+              label="Street"
+              className="address"
+              value={street}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+          </div>
+          <div className="section3">
+            <TextField
+              name="apt"
+              label="Apt #"
+              className="smallText"
+              value={apt}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+
+            <TextField
+              name="city"
+              label="City"
+              className="smallText"
+              value={city}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+
+            <TextField
+              name="state"
+              label="State"
+              className="smallText"
+              value={state}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+
+            <TextField
+              name="zipCode"
+              label="ZipCode"
+              className="smallText"
+              value={zipCode}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="phone"
+              label="Phone"
+              value={phone}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+          </div>
         </form>
       </Paper>
     );

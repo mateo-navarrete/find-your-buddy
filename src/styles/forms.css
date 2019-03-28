@@ -1,0 +1,67 @@
+.paperStyle {
+  margin: 24px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.MuiPaper-elevation2-17 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.MuiPaper-rounded-14 {
+  border-radius: 4px;
+}
+
+.MuiPaper-root-13 {
+  background-color: #fff;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.name {
+  width: 30%;
+}
+
+.email {
+  width: 30%;
+}
+
+.address {
+  width: 80%;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.adopt {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+}
+
+.reason {
+  width: 80%;
+}
+
+.hours {
+  width: 80%;
+}
+
+.where {
+  width: 80%;
+}
