@@ -20,11 +20,12 @@ export const Home = props => {
         <div>
         <div className ="videoloop">
           <video className="videoloop2" autoPlay loop muted>
-            <source src={video1} type="video/mp4" />
+            <source className = "video" src={video1} type="video/mp4" />
           </video>
           </div>
 
         <div className = "body_title" >
+        <div className = "box"> 
           <h1 className="fyb">Find Your Buddy</h1>
           <p className="about">
             Find your buddy is an app that make adoption accessible and simple.
@@ -36,7 +37,8 @@ export const Home = props => {
           <div className = "hr" > 
           Will you adopt me today? 
           </div>
-          <div> 
+          </div>
+          <div>
           <p></p>
           </div>
           <PetImgs />
