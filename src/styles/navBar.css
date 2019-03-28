@@ -10,6 +10,8 @@
   background-color: rgb(221, 231, 220);
   /* border: 1px solid black; */
   box-shadow: 4px 1px 15px -5px #bdbdbd;
+  z-index: 999;
+
 }
 
 .nav2 {
@@ -40,5 +42,3 @@
   letter-spacing: -5px;
   opacity: 30%;
 }
-
-
