@@ -1,13 +1,15 @@
 .primary {
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Quicksand', sans-serif;
+  position: sticky;
+  top: 0;
+  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 75px;
-  background-color: rgba(221, 231, 220, 0.719);
+  background-color: rgb(221, 231, 220);
   /* border: 1px solid black; */
-  box-shadow: 2px 1px 15px -5px #bdbdbd;
+  box-shadow: 4px 1px 15px -5px #bdbdbd;
 }
 
 .nav2 {
@@ -15,7 +17,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .nav2 a {
@@ -24,17 +25,16 @@
   text-align: center;
   width: 100wh;
   text-decoration: none;
-  color: #234A56;
+  color: #234a56;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 1.2s;
-
 }
 
 .nav2 a:hover {
   letter-spacing: 2px;
   color: white;
-  background-color: #417D95;
+  background-color: #417d95;
   transition: 0.64s;
   opacity: 50%;
 }
@@ -43,3 +43,5 @@
   letter-spacing: -5px;
   opacity: 30%;
 }
+
+
