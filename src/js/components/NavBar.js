@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import "../../styles/logo.css";
 import "../../styles/navBar.css";
 
-// import '../../image/fyblogo.png';
-
-// import '../../image/fyblogo.psng';
-
 export const NavBar = props => {
   return (
     <nav className="primary">

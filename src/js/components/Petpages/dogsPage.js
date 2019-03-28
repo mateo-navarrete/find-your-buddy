@@ -3,7 +3,6 @@ import { WithDogs } from "../../containers";
 
 import { AnimalDisplay } from "./animalDisplay";
 
-import { AnimalsPictures } from "./animalPictures";
 // import "../../styles/animals.css";
 
 const DogPage = ({ included, data }) => {
