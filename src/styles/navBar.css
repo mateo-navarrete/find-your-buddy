@@ -28,16 +28,19 @@
   width: 100wh;
   text-decoration: none;
   color: #234a56;
+
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: .22s;
   border-right: .4px solid rgba(122, 122, 122, 0.226);
+
 }
 
 .nav2 a:hover {
   letter-spacing: 2px;
   color: white;
+
   background-color: #2f7a97;
   transition: 0.34s;
   opacity: 50%;
@@ -53,3 +56,4 @@
   opacity: 20%;
 
 }
+
