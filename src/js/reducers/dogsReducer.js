@@ -1,4 +1,4 @@
-import { GETTING_ANIMALS, GOT_ERROR, GOT_ANIMALS } from "../constants";
+import { GETTING_DOGS, GOT_DOG_ERROR, GOT_DOGS } from "../constants";
 
 const initState = {
   data: [],
@@ -10,14 +10,14 @@ const initState = {
 export const dogsReducer = (state = initState, action) => {
   let nextState;
   switch (action.type) {
-    case GETTING_ANIMALS:
+    case GETTING_DOGS:
       nextState = { ...state, loading: true };
       return nextState;
-    case GOT_ERROR:
+    case GOT_DOG_ERROR:
       console.log(action.payload);
       nextState = { ...state, loading: true };
       return nextState;
-    case GOT_ANIMALS:
+    case GOT_DOGS:
       const { data, included, meta } = action.payload;
       nextState = {
         ...state,

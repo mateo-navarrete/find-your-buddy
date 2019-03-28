@@ -1,9 +1,10 @@
-import { combineReducers } from "redux";
-import { catsReducer } from "./catsReducer";
-import { dogsReducer } from "./dogsReducer";
-// import { menuReducer } from './menuReducer';
+import { combineReducers } from 'redux';
+import { catsReducer } from './catsReducer';
+import { dogsReducer } from './dogsReducer';
+import { ageReducer } from './forms';
 
 export const rootReducer = combineReducers({
   catsReducer,
-  dogsReducer
+  dogsReducer,
+  ageReducer,
 });

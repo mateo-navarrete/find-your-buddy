@@ -1,7 +1,12 @@
 import React from "react";
-import { WithCats } from "../containers";
+import { withCats } from "../containers";
 import { PetImgs } from "./petImgs";
 import "../../styles/homePage.css";
+
+
+
+//Jacky 
+
 
 export const Home = props => {
   return (
@@ -13,10 +18,9 @@ export const Home = props => {
         <div className="aboutSection">
           {" "}
           <p className="about">
-            {" "}
             Find your buddy is an app that make adoption accessible and simple.
             With a couple of click you can get closer on bringing one of these
-            animals into their forever homes. Find your buddy here.{" "}
+            animals into their forever homes. Find your buddy here.
           </p>
         </div>
         <div>
@@ -27,4 +31,4 @@ export const Home = props => {
   );
 };
 
-export const HomePage = WithCats(Home);
+export const HomePage = withCats(Home);
