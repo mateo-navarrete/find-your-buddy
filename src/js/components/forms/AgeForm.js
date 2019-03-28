@@ -1,7 +1,8 @@
 import React from "react";
 import { RadioGroup } from ".";
+import { withAge } from "../../containers";
 
-export const Intro = ({ id, label, options, ...props }) => {
+const Age = ({ id, is18, label, options, ...props }) => {
   return (
     <>
       <div>1/6 Intro</div>
@@ -24,13 +25,19 @@ export const Intro = ({ id, label, options, ...props }) => {
         materials. Thank you in advance for your cooperation!
       </p>
       <br />
-      <form onChange={props.handleChange}>
+      <form onChange={e => props.setAge(e.target.value)}>
         <RadioGroup id={id} label={label} options={options} />
       </form>
       <br />
-      <button name="intro" onClick={props.handleNext}>
-        next
-      </button>
+      {is18 ? (
+        <button name="intro" onClick={props.handleNext}>
+          next
+        </button>
+      ) : (
+        "You must be 18 to adopt a pet."
+      )}
     </>
   );
 };
+
+export const AgeForm = withAge(Age);
