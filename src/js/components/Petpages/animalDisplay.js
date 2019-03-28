@@ -21,7 +21,7 @@ export const AnimalDisplay = ({ included, data }) => {
       let imgUrl = imgObj[petImg.id];
       if (pet.attributes.name) {
         return (
-          <div key={pet.id}>
+          <div className  = "aAnimal" key={pet.id}>
             <img src={imgUrl} />
             <p> {pet.attributes.name}</p>
             <p> {pet.attributes.sex}</p>
@@ -33,7 +33,7 @@ export const AnimalDisplay = ({ included, data }) => {
 
   return (
     <>
-      <div>{renderAnimalInfo}</div>
+      {renderAnimalInfo}
     </>
   );
 };
