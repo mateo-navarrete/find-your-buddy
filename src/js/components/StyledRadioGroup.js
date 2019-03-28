@@ -69,7 +69,6 @@ class RadioButtonsGroup extends React.Component {
             <FormControlLabel value={false} control={<Radio />} label="No" />
           </RadioGroup>
         </FormControl>
-        <StyledButton is18={is18} handleNext={handleNext} />
       </div>
     );
   }
@@ -102,3 +101,5 @@ export default withStyles(styles)(RadioButtonsGroup);
 //     label="(Disabled option)"
 //   />
 // </RadioGroup>
+
+// <StyledButton is18={is18} handleNext={handleNext} />
