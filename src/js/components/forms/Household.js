@@ -3,7 +3,8 @@ import {
   Paper,
   Typography,
   TextField,
-  Button
+  Button,
+  Checkbox
   // IconButton,
   // FormControl,
   // Select
@@ -47,14 +48,14 @@ const styles = ({ spacing: { unit } }) => ({
 class Household extends Component {
   state = {
     name: "",
-    email: "",
-    address: "",
-    street: "",
-    apt: "",
-    city: "",
-    state: "",
-    zipCode: "",
-    phone: ""
+    contact: "",
+    relationship: "",
+    age: "",
+    rent: false,
+    own: false,
+    house: false,
+    apartment: false,
+    condo: false
   };
 
   handleChange = ({ target: { name, value } }) =>
@@ -65,14 +66,14 @@ class Household extends Component {
   render() {
     const {
       name,
-      email,
-      address,
-      street,
-      apt,
-      city,
-      state,
-      zipCode,
-      phone
+      contact,
+      relationship,
+      age,
+      rent,
+      own,
+      house,
+      apartment,
+      condo
     } = this.state;
     const { classes } = this.props;
 
@@ -83,84 +84,83 @@ class Household extends Component {
         </Typography>
         <form onSubmit={this.handleCreate}>
           <div className="section1">
+            <p>People living in your household:</p>
             <TextField
-              name="household"
+              name="name"
               label="Name"
-              className="name"
+              className="householdname"
               value={name}
               onChange={this.handleChange}
               margin="normal"
             />
             <TextField
-              name="email"
-              label="Email"
-              className="email"
-              value={email}
-              onChange={this.handleChange}
-              margin="normal"
-            />
-          </div>
-          <div className="section2">
-            <TextField
-              name="address"
-              label="Address"
-              className="address"
-              value={address}
+              name="contact"
+              label="Contact Number"
+              className="contact"
+              value={contact}
               onChange={this.handleChange}
               margin="normal"
             />
             <TextField
-              name="street"
-              label="Street"
-              className="address"
-              value={street}
+              name="relationship"
+              label="Relationship"
+              className="relationship"
+              value={relationship}
+              onChange={this.handleChange}
+              margin="normal"
+            />
+            <TextField
+              name="age"
+              label="Age"
+              className="age"
+              value={age}
               onChange={this.handleChange}
               margin="normal"
             />
           </div>
+          <div className="section2" />
+          <p>Type of Residence: </p>
           <div className="section3">
-            <TextField
-              name="apt"
-              label="Apt #"
-              className="smallText"
-              value={apt}
+            <Checkbox
+              name="rent"
+              className="rent"
+              value={rent}
               onChange={this.handleChange}
               margin="normal"
             />
-
-            <TextField
-              name="city"
-              label="City"
-              className="smallText"
-              value={city}
+            Rent
+            <Checkbox
+              name="own"
+              value={own}
               onChange={this.handleChange}
               margin="normal"
             />
-
-            <TextField
-              name="state"
-              label="State"
-              className="smallText"
-              value={state}
+            Own
+          </div>
+          <br />
+          <div className="section3">
+            <p>Type of Home:</p>
+            <Checkbox
+              name="house"
+              value={house}
               onChange={this.handleChange}
               margin="normal"
             />
-
-            <TextField
-              name="zipCode"
-              label="ZipCode"
-              className="smallText"
-              value={zipCode}
+            House
+            <Checkbox
+              name="apartment"
+              value={apartment}
               onChange={this.handleChange}
               margin="normal"
             />
-            <TextField
-              name="phone"
-              label="Phone"
-              value={phone}
+            Apartment
+            <Checkbox
+              name="condo"
+              value={condo}
               onChange={this.handleChange}
               margin="normal"
             />
+            Condo
           </div>
         </form>
       </Paper>
