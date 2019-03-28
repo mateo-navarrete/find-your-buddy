@@ -87,9 +87,9 @@ class StyledApp extends Component {
     return (
       <Paper className={classes.root}>
         <Typography variant="display1" align="center" gutterBottom>
-          Exercises
+          address
         </Typography>
-        <form onSubmit={this.handleCreate} className={classes.form}>
+        <form onSubmit={this.handleCreate}>
           <TextField
             name="title"
             label="Name"
@@ -97,6 +97,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="Email"
@@ -104,6 +105,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="Address"
@@ -111,6 +113,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="Street"
@@ -118,6 +121,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="Apt #"
@@ -125,6 +129,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="City"
@@ -132,6 +137,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="State"
@@ -139,6 +145,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="Name"
@@ -146,6 +153,7 @@ class StyledApp extends Component {
             onChange={this.handleChange}
             margin="normal"
           />
+          <br />
           <TextField
             name="title"
             label="ZipCode"
