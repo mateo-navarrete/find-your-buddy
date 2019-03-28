@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Paper,
   Typography,
@@ -7,7 +7,7 @@ import {
   // IconButton,
   // FormControl,
   // Select
-} from '@material-ui/core';
+} from "@material-ui/core";
 // import List, {
 //   ListItem,
 //   ListItemText,
@@ -16,46 +16,46 @@ import {
 // import { MenuItem } from 'material-ui/Menu';
 // import { Delete } from '@material-ui/icons';
 // import { withStyles } from 'material-ui/styles';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 
 // import { Consumer } from './context';
 
 const flex = {
-  display: 'flex',
-  alignItems: 'baseline',
-  justifyContent: 'space-evenly',
+  display: "flex",
+  alignItems: "baseline",
+  justifyContent: "space-evenly"
 };
 
 const styles = ({ spacing: { unit } }) => ({
   root: {
     margin: `${unit * 3}px auto`,
     padding: unit * 2,
-    maxWidth: 400,
+    maxWidth: 400
   },
   header: {
     ...flex,
-    marginTop: unit * 2,
+    marginTop: unit * 2
   },
   form: {
     ...flex,
-    marginBottom: unit,
-  },
+    marginBottom: unit
+  }
 });
 
 // @withStyles(styles)
 class StyledApp extends Component {
   state = {
     exercises: [
-      { id: 1, title: 'Bench Press' },
-      { id: 2, title: 'Deadlift' },
-      { id: 3, title: 'Squats' },
+      { id: 1, title: "Bench Press" },
+      { id: 2, title: "Deadlift" },
+      { id: 3, title: "Squats" }
     ],
-    title: '',
+    title: ""
   };
 
   handleChange = ({ target: { name, value } }) =>
     this.setState({
-      [name]: value,
+      [name]: value
     });
 
   handleCreate = e => {
@@ -67,17 +67,17 @@ class StyledApp extends Component {
           ...exercises,
           {
             title,
-            id: Date.now(),
-          },
+            id: Date.now()
+          }
         ],
-        title: '',
+        title: ""
       }));
     }
   };
 
   handleDelete = id =>
     this.setState(({ exercises }) => ({
-      exercises: exercises.filter(ex => ex.id !== id),
+      exercises: exercises.filter(ex => ex.id !== id)
     }));
 
   render() {
@@ -92,7 +92,63 @@ class StyledApp extends Component {
         <form onSubmit={this.handleCreate} className={classes.form}>
           <TextField
             name="title"
-            label="Address Form"
+            label="Name"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="Email"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="Address"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="Street"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="Apt #"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="City"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="State"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="Name"
+            value={title}
+            onChange={this.handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="title"
+            label="ZipCode"
             value={title}
             onChange={this.handleChange}
             margin="normal"
