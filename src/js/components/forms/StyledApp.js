@@ -92,7 +92,7 @@ class StyledApp extends Component {
         <form onSubmit={this.handleCreate} className={classes.form}>
           <TextField
             name="title"
-            label="Exercise"
+            label="Address Form"
             value={title}
             onChange={this.handleChange}
             margin="normal"
