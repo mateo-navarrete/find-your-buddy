@@ -35,7 +35,7 @@ export const Home = props => {
           </div>
           </div>
           <div className = "hr" > 
-          Will you adopt me today? 
+          Will you take me  home today? 
           </div>
           </div>
           <div>

@@ -8,7 +8,7 @@ const CatPage = ({ included, data }) => {
 
   return (
     <>
-      <div className="pageTitle"> Show us the kitties ! </div>
+      <div className="pageTitle"> Show me your kitties ! </div>
       <div className="animalContainer">
         <AnimalDisplayList included={included} data={data} />
       </div>
