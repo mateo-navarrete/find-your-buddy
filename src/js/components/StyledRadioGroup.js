@@ -50,7 +50,7 @@ class RadioButtonsGroup extends React.Component {
 
   render() {
     // const { is18 } = this.state;
-    const { is18, classes, handleNext, setAge } = this.props;
+    const { isComplete, classes, handleNext, setAge } = this.props;
 
     return (
       <div className={classes.root}>
@@ -62,7 +62,7 @@ class RadioButtonsGroup extends React.Component {
             aria-label="is18"
             name="is18"
             className={classes.group}
-            value={is18}
+            value={isComplete}
             onChange={e => setAge(e.target.value)}
           >
             <FormControlLabel value={true} control={<Radio />} label="Yes" />

@@ -25,9 +25,9 @@ const styles = theme => ({
 function getSteps() {
   return [
     'Age Verification',
-    'Address',
+    'Contact Info',
     'Household',
-    'Pet Status',
+    'Pet History',
     'Adopt Info',
     'Confirmation',
   ];
@@ -77,11 +77,11 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
   };
 
   render() {
-    const { classes, is18 } = this.props;
+    const { classes, isAgeComplete } = this.props;
     const steps = getSteps();
     const { activeStep } = this.state;
-    console.log('@', this.props, this.props.is18);
-    const isActive = activeStep === 0 ? !is18 : false;
+    console.log('@', this.props, isAgeComplete);
+    const isActive = activeStep === 0 ? !isAgeComplete : false;
     return (
       <div className={classes.root}>
         <Stepper activeStep={activeStep} alternativeLabel>

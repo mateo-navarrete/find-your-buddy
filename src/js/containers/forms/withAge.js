@@ -4,8 +4,8 @@ import { setAge } from '../../actions';
 
 const mapStateToProps = ({ ageReducer }) => {
   return {
-    id: ageReducer.id,
-    is18: ageReducer.is18,
+    // id: ageReducer.id,
+    isComplete: ageReducer.isComplete,
     label: ageReducer.label,
     options: ageReducer.options,
     message: ageReducer.message,

@@ -1,8 +1,8 @@
 import { SET_AGE } from '../../constants';
 
 const initState = {
-  id: 'is18',
-  is18: false,
+  // id: 'is18',
+  isComplete: false,
   label: 'Are you 18 years of age or older',
   options: [
     { id: 1, value: true, label: 'Yes ' },
@@ -13,12 +13,12 @@ const initState = {
 
 export const ageReducer = (state = initState, action) => {
   let nextState;
-  let is18;
+  let isComplete;
   switch (action.type) {
     case SET_AGE:
-      is18 = action.payload === 'true';
-      // console.log(action.payload, is18);
-      nextState = { ...state, is18: is18 };
+      isComplete = action.payload === 'true';
+      // console.log(action.payload, isComplete);
+      nextState = { ...state, isComplete: isComplete };
       return nextState;
     default:
       return state;
