@@ -1,11 +1,15 @@
 import React from "react";
 import { WithDogs } from "../../containers";
-import { AnimalsPictures } from "./animalPictures";
+
+import { AnimalDisplay } from "./animalDisplay";
+
+
 // import "../../styles/animals.css";
 
 
 
-const DogPage = ({ included }) => {
+
+const DogPage = ({ included, data }) => {
   // console.log("animals page", included);
 
   return (
@@ -15,7 +19,7 @@ const DogPage = ({ included }) => {
         <ul>
           <li>
             {" "}
-            <AnimalsPictures included={included} />{" "}
+            <AnimalDisplay included={included} data={data} />{" "}
           </li>
           <li> something</li>
         </ul>

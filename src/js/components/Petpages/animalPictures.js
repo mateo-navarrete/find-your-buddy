@@ -2,6 +2,7 @@ import React from "react";
 
 export const AnimalsPictures = ({ included }) => {
   let count = 0;
+
   let renderPetImgs = included.map(pet => {
     count++;
     if (pet.attributes.large && count % 3 === 0) {

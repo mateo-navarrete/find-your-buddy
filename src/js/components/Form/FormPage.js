@@ -8,7 +8,13 @@ export default class FormPage extends Component {
     household: false,
     petStatus: false,
     adoptInfo: false,
-    outro: false
+    outro: false,
+    is18Label: "Are you 18 years of age or older",
+    is18Options: [
+      { id: 1, value: "Yes", label: "Yes " },
+      { id: 2, value: "No", label: "No " }
+    ],
+    message: ""
   };
   handleNext = e => {
     const { name } = e.target;
@@ -34,6 +40,13 @@ export default class FormPage extends Component {
     };
     this.setState({ [name]: false, [backSection[name]]: true });
   };
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+      message: ""
+    });
+  };
   render() {
     const {
       intro,
@@ -41,13 +54,27 @@ export default class FormPage extends Component {
       household,
       petStatus,
       adoptInfo,
-      outro
+      outro,
+      is18Label,
+      is18Options,
+      message
     } = this.state;
     console.log(this.state);
     return (
       <>
         <div>Pet Adoption Questionnaire</div>
-        {intro ? <Intro handleNext={this.handleNext} /> : ""}
+        {intro ? (
+          <Intro
+            handleNext={this.handleNext}
+            handleChange={this.handleChange}
+            id="is18"
+            label={is18Label}
+            options={is18Options}
+            message={message}
+          />
+        ) : (
+          ""
+        )}
         {personal ? (
           <Personal handleNext={this.handleNext} handleBack={this.handleBack} />
         ) : (
