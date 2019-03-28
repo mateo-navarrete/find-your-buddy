@@ -1,6 +1,6 @@
 import "../../../styles/animals.css"
 import React from "react";
-import { WithCats } from "../../containers";
+import { withCats } from "../../containers";
 import { AnimalDisplay } from "./animalDisplay";
 
 const CatPage = ({ included, data }) => {
@@ -16,4 +16,4 @@ const CatPage = ({ included, data }) => {
   );
 };
 
-export const CatsPage = WithCats(CatPage);
+export const CatsPage = withCats(CatPage);

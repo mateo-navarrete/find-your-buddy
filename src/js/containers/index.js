@@ -1,5 +1,11 @@
-import WithDogs from './withDogs';
-import WithCats from './withCats';
+
+import withDogs from "./withDogs";
+import withCats from "./withCats";
+
+
+
+
 import { withAge } from './forms';
 
-export { WithCats, WithDogs, withAge };
+export {withCats, withDogs, withAge };
+
