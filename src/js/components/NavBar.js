@@ -34,4 +34,3 @@ export const NavBar = props => {
   );
 };
 
-//    <img src={logo} alt="" />

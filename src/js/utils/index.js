@@ -5,7 +5,7 @@ export const getAnimalData = (api, cb) => {
     .get(api, {
       headers: {
         'content-type': 'application/vnd.api+json',
-        Authorization: 'wGn1e4QF',
+        Authorization: process.env.REACT_API_KEY,
       },
     })
     .then(res => cb(res.data))
